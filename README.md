@@ -136,20 +136,30 @@ The complete application is deployed on **Render** and accessible via a **live U
 ## 📂 Project Structure
 
 ```
-repo-root/
+📂 Project Structure & Architecture
+boom-barrier-open-close-detection/
 │
-├── api/
-│   ├── main.py
-│   └── static/
-│       ├── index.html
-│       ├── style.css
-│       └── script.js
+├── api/                         # Backend (FastAPI)
+│   ├── main.py                  # FastAPI app (model loading + prediction API)
+│   └── static/                  # Frontend files
+│       ├── index.html           # UI for image upload & result display
+│       ├── script.js            # Frontend logic (API call, image preview)
+│       └── style.css            # UI styling
 │
-├── model/
+├── dataset/                     # Dataset (used during training only)
+│   ├── Open/                    # Boom barrier OPEN images
+│   └── Close/                   # Boom barrier CLOSED images
+│
+├── model/                       # Trained ML model
 │   └── boom_barrier_open_close_model.h5
 │
-├── requirements.txt
-└── README.md
+├── notebooks/                   # Model development notebook
+│   └── boom_barrier_open_close_detection.ipynb
+│
+├── requirements.txt             # Project dependencies
+├── README.md                    # Project documentation
+├── .gitignore
+└── .gitattributes
 ```
 
 ---
