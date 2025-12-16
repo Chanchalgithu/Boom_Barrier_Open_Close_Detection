@@ -25,7 +25,7 @@ app.add_middleware(
 # STATIC FILES: frontend files yahin se serve honge
 # /static/style.css, /static/script.js etc.
 # -------------------------------------------------
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="api/static"), name="static")
 
 # -------------------------------------------------
 # Load trained ML model (backend logic same, no change)
@@ -37,7 +37,7 @@ model = tf.keras.models.load_model("../model/boom_barrier_open_close_model.h5")
 # -------------------------------------------------
 @app.get("/")
 def serve_frontend():
-    return FileResponse("static/index.html")
+    return FileResponse("api/static/index.html")
 
 # -------------------------------------------------
 # PREDICTION API: image upload → OPEN / CLOSED
