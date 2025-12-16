@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+.container {
+    width: 460px;              /* card thoda wide */
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+/* 🔥 IMAGE CENTER + SIZE FIX */
+.preview {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;   /* horizontal center */
+}
+
+.preview img {
+    max-width: 320px;          /* image BIGGER */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none;
+    border: 1px solid #ddd;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #004ecc;
+}
+
+/* Result section */
+#result {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* Status badges */
+.badge-open {
+    color: #155724;
+    background: #d4edda;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.badge-close {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
